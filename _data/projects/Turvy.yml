@@ -1,0 +1,17 @@
+layout: default
+title: Turvy
+images:
+  - /assets/images/4a699984-251b-11e7-8185-0f6431f0ba19.png
+  - /assets/images/8da2475f-e8e9-4755-b289-2a91ee7a5462.png
+  - /assets/images/b51228de-c2bb-4d74-8af8-21ca76e52d58.png
+  - /assets/images/bd1ca02a-5242-46ca-85ce-59f0534b42fc.png
+description: 'An idea drawn from Terry Cavanagh’s VVVVVV, the player is tasked with helping Tina “Topsy” Turvy to reach the each level’s exit by shifting gravity in any of four directions, and using this ability to avoid the robots patrolling their little corner of the map and the shock tiles dotted around the place, both of which will electrocute Topsy and send her back to the start of the level. Topsy’s gravity manipulation is restricted to prevent the player from simply flying harmlessly through levels. Gravity cannot be shifted while Topsy is in mid-fall, and falling too far (more than two tiles) will result in her knocking herself senseless and returning her to the start of the level.
+
+
+Written in Visual Basic 6, which wasn’t the most ideal language to use, but a requirement of the assignment for which it was written. Lacking controller support, game implements a “twin-stick” style control system that employs WASD for movement and the arrow keys to shift gravity, something to which a lot of those that played it struggled to grow accustomed.'
+category: Game
+types:
+  - Puzzle
+  - Platformer
+languages:
+  - Visual Basic 6

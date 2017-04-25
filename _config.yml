@@ -1,0 +1,48 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+title: Disk Seven
+email: talktome@diskseven.com
+description: > # this means to ignore newlines until "baseurl:"
+  (not found)
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. http://diskseven.com
+logo: /assets/images/a7f1ea95-7e32-473f-9299-a14444b71aa6.png
+
+twitter_username: TrollDecker
+github_username:  TrollDecker
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+theme: jekyll-theme-hacker
+show_downloads: false
+gems:
+  - jekyll-feed
+exclude:
+  - Gemfile
+  - Gemfile.lock
+
+
+# Portfolio settings
+portfolio_dir: "projects"
+related_project_keys: ["category", "types", "languages"]
+
+# Asset settings
+defaults:
+  - scope:
+      path: "assets/images"
+    values:
+      image: true

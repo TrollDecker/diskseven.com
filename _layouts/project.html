@@ -1,0 +1,21 @@
+<header class="post-header">
+  <h1 class="post-title">{{ page.title | escape }}</h1>
+</header>
+
+{% for image in page.images %}
+<a href={{image}}><img src={{ image }} width="40%" /></a>
+{% endfor %}
+
+<ul>
+    {% for type in page.types %}
+    <li><a>{{ type }}</a></li>
+    {% endfor %}
+</ul>
+
+<ul>
+    {% for language in page.languages %}
+    <li><a>{{ language }}</a></li>
+    {% endfor %}
+</ul>
+
+{{ page.description | markdownify }}

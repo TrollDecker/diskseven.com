@@ -1,0 +1,50 @@
+---
+layout: page
+---
+<div class="post-content">
+  {% for item in site.data.contact %}
+  <h2>{{ item.name }}</h2>
+
+  <ul>
+    {% if item.site %}
+      <li><a href="https://{{ item.site }}" target="_blank">{{ item.site }}</a></li>
+    {% endif %}
+
+    {% if item.email %}
+      <li><a href="mailto:{{ item.email }}">Email: {{ item.email }}</a></li>
+    {% endif %}
+
+    {% if item.xmpp %}
+      <li>XMPP: {{ item.xmpp }}</li>
+    {% endif %}
+
+    {% if item.twitter %}
+      <li><a href="https://twitter.com/{{ item.twitter }}" target="_blank">Twitter: @{{ item.twitter }}</a></li>
+    {% endif %}
+
+    {% if item.github %}
+      <li><a href="https://github.com/{{ item.github }}" target="_blank">Github: {{ item.github }}</a></li>
+    {% endif %}
+
+    {% if item.fediverse %}
+      {% for link in item.fediverse %}
+        <li><a href="https://{{ link.domain }}/@{{ link.username }}" target="_blank">Fediverse: @{{ link.username }}@{{ link.domain }}</a></li>
+      {% endfor %}
+    {% endif %}
+
+    {% if item.linkedin %}
+      <li><a href="https://linkedin.com/in/{{ item.linkedin }}" target="_blank">LinkedIn: {{ item.linkedin }}</a></li>
+    {% endif %}
+  </ul>
+
+    {% if item.fingerprints %}
+      <ul>
+        {% for print in item.fingerprints %}
+          <li>{{ print.type }} - {{ print.name }}:
+              <input readonly type="text" class="fingerprint" value="{{ print.print }}"
+          </li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+  {% endfor %}
+</div>

@@ -1,0 +1,20 @@
+- name: Jo Jerrica Decker
+  site: diskseven.com
+  email: talktome@diskseven.com
+  twitter: TrollDecker
+  github: TrollDecker
+  linkedin: disk-seven
+  fediverse:
+    - username: TrollDecker
+      domain: social.diskseven.com
+  xmpp: TrollDecker@xmpp.diskseven.com
+  fingerprints:
+   - name: General
+     type: PGP
+     print: 613A 032E 7A93 9688 C5D6 089B BFA5 E690 CB5A 0C37
+   - name: Home
+     type: OTR
+     print: 41239AC5 AC6A415A D0B5CE96 DC6D509A 5376D8A1
+   - name: Mobile
+     type: OTR
+     print: 20DCCCD6 629E8FEC F40E25C9 17C414A9 ADEA763F DD799838 069FBE28 06B52B3B
