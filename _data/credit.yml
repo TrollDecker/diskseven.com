@@ -1,0 +1,12 @@
+- name: The lovely logo you see at the top
+  author: NatalieFrost
+  alias: NatalieFrostDev
+  link: https://twitter.com/NatalieFrostDev
+- name: Jekyll
+  link: http://jekyllrb.com/
+- name: The Hacker Theme
+  link: https://github.com/pages-themes/hacker
+- name: Jekyll Portfolio Generator
+  author: Shannon Babincsak
+  alias: codeinpink
+  link: https://github.com/codeinpink/jekyll-portfolio-generator

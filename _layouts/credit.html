@@ -1,0 +1,17 @@
+---
+layout: page
+---
+
+{% if site.data.credit %}
+  <ul>
+  {% for item in site.data.credit %}
+    <li>{{ item.name }}</li>
+      <ul>
+        {% if item.author %}
+          <li>{{ item.author }} {% if item.alias %}({{ item.alias }}){% endif %}</li>
+        {% endif %}
+        <li><a href="{{ item.link }}">Link</a></li>
+      </ul>
+  {% endfor %}
+  </ul>
+{% endif %}
