@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2017-07-27T20:56:05+01:00</updated><id>http://localhost:4000/</id><title type="html">Disk Seven</title><subtitle>(not found)
+</subtitle><entry><title type="html">Technical Difficulties, Please Stand By</title><link href="http://localhost:4000/general/2017/07/27/technical-difficulties.html" rel="alternate" type="text/html" title="Technical Difficulties, Please Stand By" /><published>2017-07-27T00:00:00+01:00</published><updated>2017-07-27T00:00:00+01:00</updated><id>http://localhost:4000/general/2017/07/27/technical-difficulties</id><content type="html" xml:base="http://localhost:4000/general/2017/07/27/technical-difficulties.html">&lt;p&gt;Long story short, this academic year has thrown me for a loop. Longer story: all kinds of problems ranging from ill health to laptop death conspired to derail just about every goal I had this year, and ultimately I was forced to suspend my studies and redo my entire third year next year.&lt;/p&gt;
+
+&lt;p&gt;Fun.&lt;/p&gt;
+
+&lt;p&gt;So what’s that mean? Well, my final year project went absolutely nowhere. The posts will remain here, but I’ll tag them with an extra category. I don’t go back to uni until September, so that gives me a month and a bit to try and recover. In the meantime, I’m looking into trying to learn C again (after my last attempt was hampered by a poorly-formatted book). I’ve also got to claw back some funds in order to replace my dead laptop, a flimsy Toshiba Satellite that seemed to be designed to go kaput after about a year or two. I also have a few ideas for some personal projects, but it’s debatable whether I can get those sorted before Uni, but if I can, great. It’s a lot more under my belt than the bare minimum I’ve maintained over the past few years.&lt;/p&gt;</content><author><name>Jo Jerrica Decker</name></author><summary type="html">Long story short, this academic year has thrown me for a loop. Longer story: all kinds of problems ranging from ill health to laptop death conspired to derail just about every goal I had this year, and ultimately I was forced to suspend my studies and redo my entire third year next year.</summary></entry><entry><title type="html">Computing Project: Getting Started 2: Electric Boogaloo</title><link href="http://localhost:4000/the%20wayside/final%20year%20project/shelflife/2017/04/15/computing-project-getting-started-2.html" rel="alternate" type="text/html" title="Computing Project: Getting Started 2: Electric Boogaloo" /><published>2017-04-15T00:00:00+01:00</published><updated>2017-04-15T00:00:00+01:00</updated><id>http://localhost:4000/the%20wayside/final%20year%20project/shelflife/2017/04/15/computing%20project-getting-started-2</id><content type="html" xml:base="http://localhost:4000/the%20wayside/final%20year%20project/shelflife/2017/04/15/computing-project-getting-started-2.html">&lt;p&gt;Upon creation of a Django project, the first order of business was to ensure that the small testing server that ships with the framework, as well as the initial project itself, was in working order before pressing on with anything else. To that end, this was a simple case of moving to the project root and running the following:[&lt;a href=&quot;https://docs.djangoproject.com/en/1.11/intro/tutorial01/&quot;&gt;1&lt;/a&gt;]&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-shell&quot; data-lang=&quot;shell&quot;&gt;python3 manage.py runserver&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;This command runs a small webserver for the purposes of development and testing, and as such is not intended for production servers, for which the likes of Apache or Nginx would be better suited.[&lt;a href=&quot;https://docs.djangoproject.com/en/1.11/intro/tutorial01/&quot;&gt;1&lt;/a&gt;]&lt;/p&gt;
+
+&lt;p&gt;If all had gone well, the output to the command line would look similar to this:[&lt;a href=&quot;https://docs.djangoproject.com/en/1.11/intro/tutorial01/&quot;&gt;1&lt;/a&gt;]&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/assets/images/4e481797-4b3f-4227-b4f5-821de038cd41.png&quot; title=&quot;Great success?&quot;&gt;&lt;img src=&quot;/assets/images/4e481797-4b3f-4227-b4f5-821de038cd41.png&quot; alt=&quot;alt text&quot; title=&quot;Great success?&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;The red warning could be disregarded for the time being, as at this moment, there were no databases to which migrations could be applied.[&lt;a href=&quot;https://docs.djangoproject.com/en/1.11/intro/tutorial01/&quot;&gt;1&lt;/a&gt;] Regardless, the server was running and was hopefully accessible at &lt;code class=&quot;highlighter-rouge&quot;&gt;http://127.0.0.1&lt;/code&gt; on port &lt;code class=&quot;highlighter-rouge&quot;&gt;8000&lt;/code&gt;. As such, the next step was to open a web browser and enter &lt;code class=&quot;highlighter-rouge&quot;&gt;http://127.0.0.1:8000/&lt;/code&gt; into the address bar, after which the following page would appear:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/assets/images/0f36a0d1-eaf1-4a57-8790-21e5969b6e80.png&quot; title=&quot;Great success. A little it pushy, though.&quot;&gt;&lt;img src=&quot;/assets/images/0f36a0d1-eaf1-4a57-8790-21e5969b6e80.png&quot; alt=&quot;alt text&quot; title=&quot;Great success. A little it pushy, though.&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Satisfied, the server can then be closed down by returning to the terminal and pressing &lt;code class=&quot;highlighter-rouge&quot;&gt;Ctrl+C&lt;/code&gt;, and work can commence.&lt;/p&gt;
+
+&lt;p&gt;It should be noted that the server can be made to listen on other ports by passing the port to runserver as an additional argument, and similarly, the IP address to which it can listen can also be passed.[&lt;a href=&quot;https://docs.djangoproject.com/en/1.11/intro/tutorial01/&quot;&gt;1&lt;/a&gt;]&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-shell&quot; data-lang=&quot;shell&quot;&gt;python3 manage.py runserver 8080
+
+python3 manage.py runserver 127.0.0.6:8080&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Additionally, the server can listen on all available public IPs by passing &lt;code class=&quot;highlighter-rouge&quot;&gt;0&lt;/code&gt; (shorthand for the address &lt;code class=&quot;highlighter-rouge&quot;&gt;0.0.0.0&lt;/code&gt;) in place of a full address:[&lt;a href=&quot;https://docs.djangoproject.com/en/1.11/intro/tutorial01/&quot;&gt;1&lt;/a&gt;]&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-shell&quot; data-lang=&quot;shell&quot;&gt;python3 manage.py runserver 0:8000&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;The next step was to create an app. An app is essentially a web application built to serve a specific purpose, said purpose varying depending on one’s needs. An app can be anything from a blogging system, to a database management system, to a simple polling application, and the project server to maintain the configurations and apps that comprise a Django-based website as a whole.[&lt;a href=&quot;https://docs.djangoproject.com/en/1.11/intro/tutorial01/&quot;&gt;1&lt;/a&gt;]&lt;/p&gt;
+
+&lt;p&gt;The intended design of ShelfLife would require the use of many of these apps, each one using its own database. Although maintaining cross-database relationships is impossible in Django, it should be possible to implement necessary workarounds in Python as and when the need arises.&lt;/p&gt;
+
+&lt;p&gt;To start things off, the first app - organisations - was created with the following command:[&lt;a href=&quot;https://docs.djangoproject.com/en/1.11/intro/tutorial01/&quot;&gt;1&lt;/a&gt;]&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-shell&quot; data-lang=&quot;shell&quot;&gt;python3 manage.py startapp organisation&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;This creates a new folder of the name organisation within the project folder, in its root, and establishes the following basic initial template from which the creation of a new app can be commenced:[&lt;a href=&quot;https://docs.djangoproject.com/en/1.11/intro/tutorial01/&quot;&gt;1&lt;/a&gt;]&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-shell&quot; data-lang=&quot;shell&quot;&gt;organisation/
+├── admin.py
+├── apps.py
+├── __init__.py
+├── migrations
+│   └── __init__.py
+├── models.py
+├── tests.py
+└── views.py&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Next, per Django’s own tutorial, a basic “Hello World” view was created, within the file &lt;code class=&quot;highlighter-rouge&quot;&gt;views.py&lt;/code&gt;:[&lt;a href=&quot;https://docs.djangoproject.com/en/1.11/intro/tutorial01/&quot;&gt;1&lt;/a&gt;]&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;django.http&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;HttpResponse&lt;/span&gt;
+
+
+&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;index&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;request&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;HttpResponse&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Hello, world. You're at the organisation index.&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;That’s literally all it takes to create a single basic view to get things started, though a fully fledged view will no doubt become increasingly complex. For the time being though, this was sufficient. The next thing that was required was to map the view to a URL, in order to allow it to be accessed and viewed in a browser. This required the addition of a new file within organisations, called &lt;code class=&quot;highlighter-rouge&quot;&gt;urls.py&lt;/code&gt;, and the following to be entered into that file:[&lt;a href=&quot;https://docs.djangoproject.com/en/1.11/intro/tutorial01/&quot;&gt;1&lt;/a&gt;]&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;django.conf.urls&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;url&lt;/span&gt;
+
+&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;views&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;urlpatterns&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;r'^'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;views&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;index&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;index&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;With that done, the existing &lt;code class=&quot;highlighter-rouge&quot;&gt;urls.py&lt;/code&gt; file within the folder &lt;code class=&quot;highlighter-rouge&quot;&gt;shelflife&lt;/code&gt; also required an update, to add a reference to the new file:[&lt;a href=&quot;https://docs.djangoproject.com/en/1.11/intro/tutorial01/&quot;&gt;1&lt;/a&gt;]&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;django.conf.urls&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;include&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;url&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;django.contrib&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;admin&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;urlpatterns&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;r'^organisation/'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;include&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'organisation.urls'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)),&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;r'^admin/'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;admin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;site&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;urls&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;The reference to the admin app provided by Django had already been automatically generated with the newly-created project, and as such the url and admin imports were already present. To accomodate the organisation app, it became necessary to import an additional method from the &lt;code class=&quot;highlighter-rouge&quot;&gt;django.conf.urls&lt;/code&gt; module, which was subsequently used to reference the new URL configuration file created within the organisation app.[&lt;a href=&quot;https://docs.djangoproject.com/en/1.11/intro/tutorial01/&quot;&gt;1&lt;/a&gt;]&lt;/p&gt;
+
+&lt;p&gt;Finally, it was possible to test the new view. The development server was executed again and a browser once again pointed toward &lt;code class=&quot;highlighter-rouge&quot;&gt;http://127.0.0.1:8000&lt;/code&gt;:[&lt;a href=&quot;https://docs.djangoproject.com/en/1.11/intro/tutorial01/&quot;&gt;1&lt;/a&gt;]&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/assets/images/55e345fd-676c-4547-b8be-497cbc09e3d8.png&quot; title=&quot;Hello!&quot;&gt;&lt;img src=&quot;/assets/images/55e345fd-676c-4547-b8be-497cbc09e3d8.png&quot; alt=&quot;alt text&quot; title=&quot;Hello!&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;With that confirmed, it was time to move on setting up the necessary databases.&lt;/p&gt;
+
+&lt;h2 id=&quot;references&quot;&gt;References&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;em&gt;Writing your first Django app, part 1&lt;/em&gt; (no date) Available at: https://docs.djangoproject.com/en/1.11/intro/tutorial01/ (Accessed: 14 April 2017).&lt;/li&gt;
+&lt;/ol&gt;</content><author><name>Jo Jerrica Decker</name></author><summary type="html">Upon creation of a Django project, the first order of business was to ensure that the small testing server that ships with the framework, as well as the initial project itself, was in working order before pressing on with anything else. To that end, this was a simple case of moving to the project root and running the following:[1]</summary></entry><entry><title type="html">Computing Project: Getting Started</title><link href="http://localhost:4000/the%20wayside/final%20year%20project/shelflife/2017/04/14/computing-project-getting-started.html" rel="alternate" type="text/html" title="Computing Project: Getting Started" /><published>2017-04-14T00:00:00+01:00</published><updated>2017-04-14T00:00:00+01:00</updated><id>http://localhost:4000/the%20wayside/final%20year%20project/shelflife/2017/04/14/computing-project-getting-started</id><content type="html" xml:base="http://localhost:4000/the%20wayside/final%20year%20project/shelflife/2017/04/14/computing-project-getting-started.html">&lt;p&gt;Initial prerequisites for developing ShelfLife:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Python 3, required for Django as the framework no longer supports Python 2. Installation depends on the OS, but most Ubuntu/Debian-based Linux distributions can install it via apt using the following command, should it be absent from one’s system:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-shell&quot; data-lang=&quot;shell&quot;&gt;sudo apt-get install python3&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;In addition, while most package managers provide many of the libraries available for Python in both its versions, it is usually recommended to use the pip package installer to install these instead, as a distribution’s package manager can often be several versions behind. As Python is available in two separate and somewhat different versions, separate versions of pip exist for those versions. For the purposes of this project, pip3 will be used. If this is absent from one’s system, it can be installed via a package manager or invoking cURL (example for Python 2):[&lt;a href=&quot;https://en.wikipedia.org/wiki/Pip_(package_manager)&quot;&gt;3&lt;/a&gt;]&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-shell&quot; data-lang=&quot;shell&quot;&gt;curl https://bootstrap.pypa.io/get-pip.py | python&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Django: The framework of choice for this project. This will be installed using pip in order to ensure the latest version has been installed.[&lt;a href=&quot;https://docs.djangoproject.com/en/1.11/topics/install/&quot;&gt;4&lt;/a&gt;] At the time of install, the Python 3 version of pip is installed on Debian-based distros as pip3, possibly to avoid conflicts with Python 2.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-shell&quot; data-lang=&quot;shell&quot;&gt;sudo pip3 install django&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;PostgreSQL. The database of choice for this project. This can be installed via the package manager, though binaries and source are also available from the project’s website.[&lt;a href=&quot;https://www.postgresql.org/download/linux/ubuntu/&quot;&gt;5&lt;/a&gt;]&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-shell&quot; data-lang=&quot;shell&quot;&gt;sudo apt-get install postgresql-9.4&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Note that the installation process may create a system user called “postgres”, which acts as a superuser for accessing and modifying databases on the installed system.[&lt;a href=&quot;https://www.postgresql.org/docs/9.6/static/tutorial-createdb.html&quot;&gt;6&lt;/a&gt;]&lt;/p&gt;
+
+&lt;p&gt;Once those were installed, a new Django project can be created by navigating to the folder the folder that will host the project files for the time being using cd. Once there, a new project folder can be created with the following command[&lt;a href=&quot;https://docs.djangoproject.com/en/1.11/intro/tutorial01/&quot;&gt;1&lt;/a&gt;]:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-shell&quot; data-lang=&quot;shell&quot;&gt;django-admin startproject &amp;lt;site-name&amp;gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Where &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;site-name&amp;gt;&lt;/code&gt; will be the name of the project, in the case of this particular project, “shelflife”. The immediate result of this command will be the creation of the following folder structure[&lt;a href=&quot;https://docs.djangoproject.com/en/1.11/intro/tutorial01/&quot;&gt;1&lt;/a&gt;][&lt;a href=&quot;https://tutorial.djangogirls.org/en/django_start_project/index.html&quot;&gt;2&lt;/a&gt;]:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-shell&quot; data-lang=&quot;shell&quot;&gt;shelflife/
+├── manage.py
+└── shelflife
+    ├── __init__.py
+    ├── settings.py
+    ├── urls.py
+    └── wsgi.py&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;As an alternative, a full stop can be appended to the command, and instead of creating a new root folder for the project, the current folder will be used as the project root.[&lt;a href=&quot;https://tutorial.djangogirls.org/en/django_start_project/index.html&quot;&gt;2&lt;/a&gt;] Note that the root folder can take any name, and thus be rename to just about anything desired, without any detriment to the operation of the project.[&lt;a href=&quot;https://docs.djangoproject.com/en/1.11/intro/tutorial01/&quot;&gt;1&lt;/a&gt;]&lt;/p&gt;
+
+&lt;h2 id=&quot;references&quot;&gt;REFERENCES&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;em&gt;Writing your first Django app, part 1&lt;/em&gt; (no date) Available at: https://docs.djangoproject.com/en/1.11/intro/tutorial01/ (Accessed: 14 April 2017).&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;Your first Django Project!&lt;/em&gt; (no date) Available at: https://tutorial.djangogirls.org/en/django_start_project/index.html (Accessed: 14 April 2017).&lt;/li&gt;
+  &lt;li&gt;‘Pip (package manager)’ (2017) &lt;em&gt;Wikipedia.&lt;/em&gt; Available at: https://en.wikipedia.org/wiki/Pip_(package_manager) (Accessed: 14 April 2017).&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;How to install Django&lt;/em&gt; (no date) Available at: https://docs.djangoproject.com/en/1.11/topics/install/ (Accessed: 14 April 2017).&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;PostgreSQL: Linux downloads (Ubuntu)&lt;/em&gt; (no date) Available at: https://www.postgresql.org/download/linux/ubuntu/ (Accessed: 14 April 2017).&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;PostgreSQL: Documentation: 9.6: Creating a Database&lt;/em&gt; (no date) Available at: https://www.postgresql.org/docs/9.6/static/tutorial-createdb.html (Accessed: 14 April 2017).&lt;/li&gt;
+&lt;/ol&gt;</content><author><name>Jo Jerrica Decker</name></author><summary type="html">Initial prerequisites for developing ShelfLife:</summary></entry><entry><title type="html">Computing Project: Database Design</title><link href="http://localhost:4000/the%20wayside/final%20year%20project/shelflife/2017/03/31/computing-project-database-design.html" rel="alternate" type="text/html" title="Computing Project: Database Design" /><published>2017-03-31T00:00:00+01:00</published><updated>2017-03-31T00:00:00+01:00</updated><id>http://localhost:4000/the%20wayside/final%20year%20project/shelflife/2017/03/31/computing-project-database-design</id><content type="html" xml:base="http://localhost:4000/the%20wayside/final%20year%20project/shelflife/2017/03/31/computing-project-database-design.html">&lt;p&gt;&lt;a href=&quot;/assets/images/ae24fecc-cfdc-4469-b615-5bf194ca064c.png&quot; title=&quot;Database design&quot;&gt;&lt;img src=&quot;/assets/images/ae24fecc-cfdc-4469-b615-5bf194ca064c.png&quot; alt=&quot;alt text&quot; title=&quot;Database design&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;User&lt;/strong&gt;: Stores user-specific data such as their personal information and their shelves.
+    &lt;ul&gt;
+      &lt;li&gt;&lt;strong&gt;ReleaseShelf&lt;/strong&gt; stores many-to-many links between releases and users’ shelves (a shelf can hold many releases and a release can be held by many shelves).&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Edit&lt;/strong&gt;: Maintains details of edits made on records, and the votes for and against each one.
+    &lt;ul&gt;
+      &lt;li&gt;&lt;strong&gt;Edit&lt;/strong&gt; (the eponymous table) maintains a one-to-many relationship with the Release table: a release can be edited many times, but an edit can only affect one release at a time.&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;Vote&lt;/strong&gt; maintains one-to-many relationships with Edit (an edit can be voted upon many times, but a vote only applies on one edit), as well as User (a user can cast many votes, but a vote can only be attributed to one user.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Series&lt;/strong&gt;: Holds data on a series, the individual volumes within that series, and the type-agnostic data for a release. Includes a NestedRelease table for releases bundled within releases (for example, box sets).
+    &lt;ul&gt;
+      &lt;li&gt;In addition to the aforementioned relationships, &lt;strong&gt;Release&lt;/strong&gt; is also linked by many-to-many relationships and one-to-many relationships between their more type-specific systems.&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;ReleaseCover&lt;/strong&gt; stores many-to-many links between covers and releases, as it’s entirely possible for a single media release to possess alternative covers. An example of this is comics, in which a single issue can release with several available variant covers.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Book&lt;/strong&gt;: Contains data on books released in a series. This data would not only include paperback and hardback formats, but also magazine formats, allowing the incorporation of comics without the need for a separate database and repeated data for collected editions.
+    &lt;ul&gt;
+      &lt;li&gt;The &lt;strong&gt;ReleaseExtra&lt;/strong&gt; table maintains an addition foreign-key relationship to a currency table to accommodate the RRPs usually listed on books.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Movie&lt;/strong&gt;: This table is a bit of a misnomer in one sense, as it would not only include the usual feature-length releases that many associate with the term, but also any kind of motion picture, be it a TV show, short film, documentary, or - of course - feature-length releases, among other possible forms.
+    &lt;ul&gt;
+      &lt;li&gt;&lt;strong&gt;FeatureComponent&lt;/strong&gt; maintains two additional one-to-many relationships to the Definition and Aspect Ratio tables, allowing such video data to be included in this system’s records.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Music&lt;/strong&gt;: Holds information on music releases that include albums and singles, as well as EPs.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Game&lt;/strong&gt;: Contains information on videogame releases.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Organisation&lt;/strong&gt;: Contains information on the organisations involved in the production of a media release.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Person&lt;/strong&gt;: Holds information in the individual people involved, whether they are real persons directly involved in a release’s creation or fictitious characters depicted by that media.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Format&lt;/strong&gt;: Stores formatting data about a release.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;International&lt;/strong&gt;: Maintains data relevant to a release’s national origin and point of sale.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Cover&lt;/strong&gt;: Maintains data regarding the covers of each release.&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Jo Jerrica Decker</name></author><summary type="html"></summary></entry><entry><title type="html">Computing Project: Methodology</title><link href="http://localhost:4000/the%20wayside/final%20year%20project/shelflife/2017/03/30/computing-project-methodology.html" rel="alternate" type="text/html" title="Computing Project: Methodology" /><published>2017-03-30T00:00:00+01:00</published><updated>2017-03-30T00:00:00+01:00</updated><id>http://localhost:4000/the%20wayside/final%20year%20project/shelflife/2017/03/30/computing-project-methodology</id><content type="html" xml:base="http://localhost:4000/the%20wayside/final%20year%20project/shelflife/2017/03/30/computing-project-methodology.html">&lt;p&gt;For this project, I have opted to employ the use Kanban, an agile development methodology that has been adapted to software creation from its origins at the Toyota Motor Corporation. This methodology appears to bear some similarities to Scrum, though I beleive it may be better suited to an individual developer than the team-orientated latter.[&lt;a href=&quot;https://en.wikipedia.org/wiki/Kanban_(development)&quot;&gt;1&lt;/a&gt;][&lt;a href=&quot;https://en.wikipedia.org/wiki/Kanban_board&quot;&gt;2&lt;/a&gt;]&lt;/p&gt;
+
+&lt;p&gt;I believe this will allow myself to remain focused on a specific part of the project each week, while also affording me the opportunity to return to prior tasks, if briefly, should an unforeseen issue arise, something utterly vital to a project of this scale, and that a waterfall methodology could not accommodate.[&lt;a href=&quot;http://www.seguetech.com/waterfall-vs-agile-methodology/&quot;&gt;3&lt;/a&gt;][&lt;a href=&quot;https://blog.udemy.com/agile-vs-waterfall/&quot;&gt;4&lt;/a&gt;]&lt;/p&gt;
+
+&lt;h2 id=&quot;references&quot;&gt;References&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;‘Kanban (development)’ (2017) &lt;em&gt;Wikipedia&lt;/em&gt;, Available at: https://en.wikipedia.org/wiki/Kanban_(development) (Accessed: 25 February 2017).&lt;/li&gt;
+  &lt;li&gt;‘Kanban board’ (2017) &lt;em&gt;Wikipedia&lt;/em&gt;, Available at: https://en.wikipedia.org/wiki/Kanban_board (Accessed: 25 February 2017).&lt;/li&gt;
+  &lt;li&gt;Bowes, J. (2014) ‘Agile vs Waterfall: Comparing project management methods’, &lt;em&gt;Segue Technologies&lt;/em&gt;, 17 July. Available at: http://www.seguetech.com/waterfall-vs-agile-methodology/ (Accessed: 25 February 2017).&lt;/li&gt;
+  &lt;li&gt;Mikoluk, J. (2013) ‘Waterfall vs. Agile: Which is the Right Development Methodology for Your Project?’, &lt;em&gt;Udemy Blog&lt;/em&gt;, 9 September. Available at: https://blog.udemy.com/agile-vs-waterfall/ (Accessed: 25 February 2017).&lt;/li&gt;
+&lt;/ol&gt;</content><author><name>Jo Jerrica Decker</name></author><summary type="html">For this project, I have opted to employ the use Kanban, an agile development methodology that has been adapted to software creation from its origins at the Toyota Motor Corporation. This methodology appears to bear some similarities to Scrum, though I beleive it may be better suited to an individual developer than the team-orientated latter.[1][2]</summary></entry><entry><title type="html">Computing Project: Analysis</title><link href="http://localhost:4000/the%20wayside/final%20year%20project/shelflife/2017/03/29/computing-project-analysis.html" rel="alternate" type="text/html" title="Computing Project: Analysis" /><published>2017-03-29T00:00:00+01:00</published><updated>2017-03-29T00:00:00+01:00</updated><id>http://localhost:4000/the%20wayside/final%20year%20project/shelflife/2017/03/29/computing-project-analysis</id><content type="html" xml:base="http://localhost:4000/the%20wayside/final%20year%20project/shelflife/2017/03/29/computing-project-analysis.html">&lt;ul&gt;
+  &lt;li&gt;The system will be created using Python and the Django web framework, due in part to my own familiarity with the Python language and their permissive open-source licenses that would allow the use of the software in both commercial and non-commercial projects without any fees. Django supports PostgreSQL by default, which offers a number of features that would be beneficial to my goals.[1][&lt;a href=&quot;https://www.djangoproject.com/&quot;&gt;2&lt;/a&gt;][&lt;a href=&quot;https://www.python.org/&quot;&gt;3&lt;/a&gt;][&lt;a href=&quot;https://www.postgresql.org/&quot;&gt;4&lt;/a&gt;][&lt;a href=&quot;https://opensource.org/licenses/postgresql&quot;&gt;5&lt;/a&gt;][&lt;a href=&quot;https://opensource.org/licenses/Python-2.0&quot;&gt;6&lt;/a&gt;][&lt;a href=&quot;https://opensource.org/licenses/BSD-3-Clause&quot;&gt;7&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;Research of other similar services has included services such as MusicBrainz, which does acheive a lot of similar goals to my own project, though remains strictly focused on music releases. I noted that MetaBrainz collaborates with the Internet Archive to run a separate service, the Cover Art Archive, form which MusicBrainz draws the cover art for each release, if available, and also provides links to services such as ISNI, which provides unique identifiers for personalities who may operate under multiple stage names or share a name with other artists.[&lt;a href=&quot;https://musicbrainz.org&quot;&gt;8&lt;/a&gt;][&lt;a href=&quot;www.imdb.org&quot;&gt;10&lt;/a&gt;][&lt;a href=&quot;www.isni.org&quot;&gt;11&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;Additionally, proprietary services such as the Internet Movie Database and a number of comic book databases have been examined, though most appear to lack some of the key requirements I had set for my own project, such as an API or the ability to adequately accomodate certain factors regarding a media release (such as trade paperbacks of comics).[&lt;a href=&quot;coverartarchive.org&quot;&gt;9&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;Future research will entail the specifics of each type of media release, to further understand the data I would need to store in the system. This may extend beyond the obvious details such as movies having national age ratings and books having an ISBN number etc.&lt;/li&gt;
+  &lt;li&gt;I initially considered simply resorting to Azure for deployment, for the sake of ease, though recently I have also discovered Digital Ocean, and may consider deploying there instead, though my final decision will ultimately owe itself to personal experience.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;references&quot;&gt;References&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Hourieh, A. (2008) &lt;em&gt;Learning Website Development with Django : A Beginner’s Tutorial to Building Web Applications, Quickly and Cleanly with the Django Application Framework.&lt;/em&gt; Birmingham: Packt Publishing.&lt;/li&gt;
+  &lt;li&gt;Django Software Foundation (no date) &lt;em&gt;The web framework for perfectionists with deadlines.&lt;/em&gt; Available at: https://www.djangoproject.com/ (Accessed: 25 February 2017).&lt;/li&gt;
+  &lt;li&gt;Python Software Foundation (no date) &lt;em&gt;Welcome to Python.org.&lt;/em&gt; Available at: https://www.python.org/ (Accessed: 25 February 2017).&lt;/li&gt;
+  &lt;li&gt;The PostgreSQL Global Development Group (no date) &lt;em&gt;PostgreSQL: The world’s most advanced open source database&lt;/em&gt; Available at: https://www.postgresql.org/ (Accessed: 25 February 2017).&lt;/li&gt;
+  &lt;li&gt;The Open Source Initiative (no date) &lt;em&gt;The PostgreSQL Licence (PostgreSQL)&lt;/em&gt; Available at: https://opensource.org/licenses/postgresql (Accessed: 25 February 2017).&lt;/li&gt;
+  &lt;li&gt;The Open Source Initiative (no date) &lt;em&gt;Python License (Python-2.0)&lt;/em&gt; Available at: https://opensource.org/licenses/Python-2.0 (Accessed: 25 February 2017).&lt;/li&gt;
+  &lt;li&gt;The Open Source Initiative (no date) &lt;em&gt;The 3-Clause BSD License&lt;/em&gt; Available at: https://opensource.org/licenses/BSD-3-Clause (Accessed: 25 February 2017).&lt;/li&gt;
+  &lt;li&gt;MetaBrainz Foundation (no date) &lt;em&gt;MusicBrainz - The Open Music Encyclopedia&lt;/em&gt; Available at: https://musicbrainz.org (Accessed: 25 February 2017).&lt;/li&gt;
+  &lt;li&gt;MetaBrainz Foundation, Internet Archive (no date) &lt;em&gt;Cover Art Archive&lt;/em&gt; Available at: coverartarchive.org (Accessed: 25 February 2017).&lt;/li&gt;
+  &lt;li&gt;IMDb.com, Inc. (no date) &lt;em&gt;IDMb - Movies, TV and Celebrities - IMDb&lt;/em&gt; Available at: www.imdb.org (Accessed: 25 February 2017).&lt;/li&gt;
+  &lt;li&gt;ISNI International Agency (no date) &lt;em&gt;ISNI&lt;/em&gt; Available at: www.isni.org (Accessed: 25 February 2017).&lt;/li&gt;
+&lt;/ol&gt;</content><author><name>Jo Jerrica Decker</name></author><summary type="html">The system will be created using Python and the Django web framework, due in part to my own familiarity with the Python language and their permissive open-source licenses that would allow the use of the software in both commercial and non-commercial projects without any fees. Django supports PostgreSQL by default, which offers a number of features that would be beneficial to my goals.[1][2][3][4][5][6][7] Research of other similar services has included services such as MusicBrainz, which does acheive a lot of similar goals to my own project, though remains strictly focused on music releases. I noted that MetaBrainz collaborates with the Internet Archive to run a separate service, the Cover Art Archive, form which MusicBrainz draws the cover art for each release, if available, and also provides links to services such as ISNI, which provides unique identifiers for personalities who may operate under multiple stage names or share a name with other artists.[8][10][11] Additionally, proprietary services such as the Internet Movie Database and a number of comic book databases have been examined, though most appear to lack some of the key requirements I had set for my own project, such as an API or the ability to adequately accomodate certain factors regarding a media release (such as trade paperbacks of comics).[9] Future research will entail the specifics of each type of media release, to further understand the data I would need to store in the system. This may extend beyond the obvious details such as movies having national age ratings and books having an ISBN number etc. I initially considered simply resorting to Azure for deployment, for the sake of ease, though recently I have also discovered Digital Ocean, and may consider deploying there instead, though my final decision will ultimately owe itself to personal experience.</summary></entry><entry><title type="html">Computing Project: Scope and Constraints</title><link href="http://localhost:4000/the%20wayside/final%20year%20project/shelflife/2017/03/28/computing-project-scope-and-constraints.html" rel="alternate" type="text/html" title="Computing Project: Scope and Constraints" /><published>2017-03-28T00:00:00+01:00</published><updated>2017-03-28T00:00:00+01:00</updated><id>http://localhost:4000/the%20wayside/final%20year%20project/shelflife/2017/03/28/computing-project-scope-and-constraints</id><content type="html" xml:base="http://localhost:4000/the%20wayside/final%20year%20project/shelflife/2017/03/28/computing-project-scope-and-constraints.html">&lt;p&gt;Further to the prior proposal post, the finished product, as at the time of hand-in, should consist of a collection of services and the databases that they will use. The service itself, will be constructed using Python and the Django web framework, as a means to dynamically produce the necessary pages and forms based upon the data stored within the required PostgreSQL-based databases.&lt;/p&gt;
+
+&lt;p&gt;To that end, the final product should ideally contain:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;The individual Django-based systems and PostgreSQL databases containing the necessary tables relevant to each type of medium represented by the system - movies, music, books, comics and video games - as well as the individuals involved in each piece of media, be they actual cast and crew or the characters depicted, and the necessary account data required for maintaining user accounts and personal collection data.&lt;/li&gt;
+  &lt;li&gt;A web-based front-end for the purposes of viewing and updating media and account information.&lt;/li&gt;
+  &lt;li&gt;A simple, easy-to-use API that will allow external developers access to the service’s data for the purposes of app or tool development.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Of course, I will be restricted by the following contraints that may limit my progress with this project or even force myself to make sacrifices on its final functionality:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Time - This project may prove to be somewhat ambitious in its scale and the quantity of work that would be required to complete it to a satisfactory state.&lt;/li&gt;
+  &lt;li&gt;Cost of maintaining the service - as the overall size of the data and userbase inevitably increases, the cost of maintaining the service, such as ensuring sufficient space for the that data as well as bandwidth to accomodate a potential increase in concurrent users, may rise significantly.&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Jo Jerrica Decker</name></author><summary type="html">Further to the prior proposal post, the finished product, as at the time of hand-in, should consist of a collection of services and the databases that they will use. The service itself, will be constructed using Python and the Django web framework, as a means to dynamically produce the necessary pages and forms based upon the data stored within the required PostgreSQL-based databases.</summary></entry><entry><title type="html">Computing Project: ShelfLife</title><link href="http://localhost:4000/the%20wayside/final%20year%20project/shelflife/2017/03/01/computing-project-shelflife.html" rel="alternate" type="text/html" title="Computing Project: ShelfLife" /><published>2017-03-01T00:00:00+00:00</published><updated>2017-03-01T00:00:00+00:00</updated><id>http://localhost:4000/the%20wayside/final%20year%20project/shelflife/2017/03/01/computing-project-shelflife</id><content type="html" xml:base="http://localhost:4000/the%20wayside/final%20year%20project/shelflife/2017/03/01/computing-project-shelflife.html">&lt;p&gt;In the prior post I outlined the problem I wanted to address with my project, and the ideas milling about my head to that end resulted in one workable idea.&lt;/p&gt;
+
+&lt;p&gt;I call it ShelfLife.&lt;/p&gt;
+
+&lt;p&gt;ShelfLife would be a web-based media database and collection organiser, designed to store records about media releases in their various forms, as well as their creators and contributors, and allow users to maintain personal collections that they could access from any device.&lt;/p&gt;
+
+&lt;p&gt;In its simplest terms, ShelfLife should ideally work thus:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;The service should store records about media releases in various forms - initially only a few to begin with - and encourages users to fill in any gaps in those records, be they small details or entire releases that have been absent.&lt;/li&gt;
+  &lt;li&gt;However, users should not get away with adding whatever they pleased with any kind of abandon. A voting system should be in place to prevent erroneous or malicious edits from being committed. Users submitting data should be expected to back up their contributions with some evidence, which should not be too difficult to produce if one is submitting such data - it should likely be in their possession to begin with, after all.&lt;/li&gt;
+  &lt;li&gt;Users should be able to build personal lists of releases to serve as a means to catalogue their own personal media collections, though these lists could be used for other purposes.&lt;/li&gt;
+  &lt;li&gt;The service should provide an API to provide developers with the access needed to develop their own apps or tools that utilise the service.&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Jo Jerrica Decker</name></author><summary type="html">In the prior post I outlined the problem I wanted to address with my project, and the ideas milling about my head to that end resulted in one workable idea.</summary></entry><entry><title type="html">Computing Project: A Need To Fill</title><link href="http://localhost:4000/the%20wayside/final%20year%20project/shelflife/2017/02/28/computing-project-a-need-to-fill.html" rel="alternate" type="text/html" title="Computing Project: A Need To Fill" /><published>2017-02-28T00:00:00+00:00</published><updated>2017-02-28T00:00:00+00:00</updated><id>http://localhost:4000/the%20wayside/final%20year%20project/shelflife/2017/02/28/computing-project-a-need-to-fill</id><content type="html" xml:base="http://localhost:4000/the%20wayside/final%20year%20project/shelflife/2017/02/28/computing-project-a-need-to-fill.html">&lt;p&gt;In determining a project I would like to work on, I felt that it was necessary to consider some problems I had personally encountered in life, and that had yet to be - in my opinion - suitably addressed. However, the problems I felt that I could address were few and far between, with the likes of, say, the harassment problem that plagues proprietary social media platforms of late[&lt;a href=&quot;https://www.bloomberg.com/news/articles/2016-10-17/disney-said-to-have-dropped-twitter-pursuit-partly-over-image&quot;&gt;1&lt;/a&gt;][&lt;a href=&quot;http://fortune.com/2016/10/18/twitter-disney-salesforce/&quot;&gt;2&lt;/a&gt;] seeming somewhat out of my own league.&lt;/p&gt;
+
+&lt;p&gt;One problem, however, did remain on my mind for some years now, as it had been a constant source of infuriation for myself personally, and I realised that this computing project, and the skills I have learned in pursuit of my degree, could actually allow me to address: To this day, I have yet to find a suitable piece of software or service that can assist my ability to catalogue and keep track of my own media releases, and given the increasing prevalence of cheaper digital media, and the rise of frequent (and often ridiculous) sales and bundles offered by the various current digital distribution platforms, that was most certainly a hole that needed filling, in my opinion.&lt;/p&gt;
+
+&lt;p&gt;As someone whose own personal media collection has near-uncontrollably ballooned since the launch of the first Humble Indie Bundle in 2010[&lt;a href=&quot;https://arstechnica.com/gaming/2010/05/the-greatest-indie-game-sale-ever-and-how-it-came-to-be/&quot;&gt;3&lt;/a&gt;], I find it almost impossible to keep track of my current collection across the multitudes of services from which I have purchased. As such, I am often faced with potential dilemmas in which I face the risk of making a duplicate purchase, without a suitably efficient means of being able to check. Even in this day and age of digital media, I face this dilemma when making physical purchases, a situation that has at least once resulted in myself actually making that duplicate purchase as recently as last year. If you’re curious, it was Deep Dish’s Flashdance, and I have still yet to figure out what to do with the duplicate.&lt;/p&gt;
+
+&lt;p&gt;Ultimately, I feel there is at least a need, at least for myself personally, for a means to catalogue and organise my personal media collection digitally, and with the ability to check that collection from just about anywhere, be it at my desk whenever a new bundle or sale is launched, or in a charity shop searching for some CDs that I could never acquire in my younger years.&lt;/p&gt;
+
+&lt;h2 id=&quot;references&quot;&gt;References&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Sherman, A., Palmeri, C., Frier, S. (2016) ‘Disney Dropped Twitter Pursuit Partly Over Image’, &lt;em&gt;Bloomberg&lt;/em&gt;, 18 October. Available at: https://www.bloomberg.com/news/articles/2016-10-17/disney-said-to-have-dropped-twitter-pursuit-partly-over-image (Accessed: 28 February 2017).&lt;/li&gt;
+  &lt;li&gt;Ingram, M. (2016) ‘Here’s Why Disney and Salesforce.com Dropped Their Bids for Twitter’, &lt;em&gt;Fortune&lt;/em&gt;, 18 October. Available at: http://fortune.com/2016/10/18/twitter-disney-salesforce/ (Accessed: 28 February 2017).&lt;/li&gt;
+  &lt;li&gt;Thompson, M. (2010) ‘Humble Bundle: greatest sale of indie games ever?’, &lt;em&gt;Ars Technica&lt;/em&gt;, 4 May. Available at: https://arstechnica.com/gaming/2010/05/the-greatest-indie-game-sale-ever-and-how-it-came-to-be/ (Accessed: 28 February 2017&lt;/li&gt;
+&lt;/ol&gt;</content><author><name>Jo Jerrica Decker</name></author><summary type="html">In determining a project I would like to work on, I felt that it was necessary to consider some problems I had personally encountered in life, and that had yet to be - in my opinion - suitably addressed. However, the problems I felt that I could address were few and far between, with the likes of, say, the harassment problem that plagues proprietary social media platforms of late[1][2] seeming somewhat out of my own league.</summary></entry><entry><title type="html">Computing Project: Introduction</title><link href="http://localhost:4000/the%20wayside/final%20year%20project/shelflife/2017/02/27/computing-project-introduction.html" rel="alternate" type="text/html" title="Computing Project: Introduction" /><published>2017-02-27T00:00:00+00:00</published><updated>2017-02-27T00:00:00+00:00</updated><id>http://localhost:4000/the%20wayside/final%20year%20project/shelflife/2017/02/27/computing-project-introduction</id><content type="html" xml:base="http://localhost:4000/the%20wayside/final%20year%20project/shelflife/2017/02/27/computing-project-introduction.html">&lt;p&gt;As part of the final year of my course in pursuit of a BSc degree in Computer Science, I have been tasked with defining, designing and ultimately implementing a project of my own choosing, as approved by tutors, that - if completed, can be demonstrated at Teesside University’s annual ExpoTees event.&lt;/p&gt;
+
+&lt;p&gt;As a near requirement of this project, I will be maintaining a series of blog posts documenting the progress of my project, and the research made in the process of making the intended end result a reality. This blog will ultimately serve to document all that will be required in the final report to be submitted at the end of the three-month period afforded to this project.&lt;/p&gt;</content><author><name>Jo Jerrica Decker</name></author><summary type="html">As part of the final year of my course in pursuit of a BSc degree in Computer Science, I have been tasked with defining, designing and ultimately implementing a project of my own choosing, as approved by tutors, that - if completed, can be demonstrated at Teesside University’s annual ExpoTees event.</summary></entry></feed>

@@ -3,6 +3,7 @@ layout: post
 title: "Computing Project: Getting Started"
 author: Jo Jerrica Decker
 categories:
+  - The Wayside
   - Final Year Project
   - ShelfLife
 ---

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <link rel="stylesheet" href="/assets/css/style.css?v=">
+    <link rel="stylesheet" href="/assets/css/footer.css">
+    <link rel="stylesheet" href="/assets/css/navbar.css">
+    <link rel="stylesheet" href="/assets/css/fingerprint.css">
+    <title>Disk Seven</title>
+  </head>
+
+  <body>
+
+    <header>
+      <div class="container">
+        <img src=/assets/images/a7f1ea95-7e32-473f-9299-a14444b71aa6.png width=50% />
+        <h2>(not found)
+</h2>
+
+        
+          <nav class="main-nav">
+            <ul>
+              
+                <li><a href=/>Portfolio</a></li>
+              
+                <li><a href=/blog/>Blog</a></li>
+              
+                <li><a href=/about/>About Me</a></li>
+              
+                <li><a href=/contact/>Contact</a></li>
+              
+                <li><a href=/credit/>Credit</a></li>
+              
+            </ul>
+          </nav>
+        
+
+        
+      </div>
+    </header>
+
+    <div class="container">
+      <section id="main_content">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <h1 class="post-title" itemprop="name headline">Computing Project: Getting Started</h1>
+  <p class="post-meta">
+    <time datetime="2017-04-14T00:00:00+01:00" itemprop="datePublished">
+      
+      Apr 14, 2017
+    </time>
+    
+    • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Jo Jerrica Decker</span></span>
+    </p>
+
+  <div class="post-content" itemprop="articleBody">
+    <p>Initial prerequisites for developing ShelfLife:</p>
+
+<ul>
+  <li>Python 3, required for Django as the framework no longer supports Python 2. Installation depends on the OS, but most Ubuntu/Debian-based Linux distributions can install it via apt using the following command, should it be absent from one’s system:</li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell">sudo apt-get install python3</code></pre></figure>
+
+<ul>
+  <li>In addition, while most package managers provide many of the libraries available for Python in both its versions, it is usually recommended to use the pip package installer to install these instead, as a distribution’s package manager can often be several versions behind. As Python is available in two separate and somewhat different versions, separate versions of pip exist for those versions. For the purposes of this project, pip3 will be used. If this is absent from one’s system, it can be installed via a package manager or invoking cURL (example for Python 2):[<a href="https://en.wikipedia.org/wiki/Pip_(package_manager)">3</a>]</li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell">curl https://bootstrap.pypa.io/get-pip.py | python</code></pre></figure>
+
+<ul>
+  <li>Django: The framework of choice for this project. This will be installed using pip in order to ensure the latest version has been installed.[<a href="https://docs.djangoproject.com/en/1.11/topics/install/">4</a>] At the time of install, the Python 3 version of pip is installed on Debian-based distros as pip3, possibly to avoid conflicts with Python 2.</li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell">sudo pip3 install django</code></pre></figure>
+
+<ul>
+  <li>PostgreSQL. The database of choice for this project. This can be installed via the package manager, though binaries and source are also available from the project’s website.[<a href="https://www.postgresql.org/download/linux/ubuntu/">5</a>]</li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell">sudo apt-get install postgresql-9.4</code></pre></figure>
+
+<p>Note that the installation process may create a system user called “postgres”, which acts as a superuser for accessing and modifying databases on the installed system.[<a href="https://www.postgresql.org/docs/9.6/static/tutorial-createdb.html">6</a>]</p>
+
+<p>Once those were installed, a new Django project can be created by navigating to the folder the folder that will host the project files for the time being using cd. Once there, a new project folder can be created with the following command[<a href="https://docs.djangoproject.com/en/1.11/intro/tutorial01/">1</a>]:</p>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell">django-admin startproject &lt;site-name&gt;</code></pre></figure>
+
+<p>Where <code class="highlighter-rouge">&lt;site-name&gt;</code> will be the name of the project, in the case of this particular project, “shelflife”. The immediate result of this command will be the creation of the following folder structure[<a href="https://docs.djangoproject.com/en/1.11/intro/tutorial01/">1</a>][<a href="https://tutorial.djangogirls.org/en/django_start_project/index.html">2</a>]:</p>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell">shelflife/
+├── manage.py
+└── shelflife
+    ├── __init__.py
+    ├── settings.py
+    ├── urls.py
+    └── wsgi.py</code></pre></figure>
+
+<p>As an alternative, a full stop can be appended to the command, and instead of creating a new root folder for the project, the current folder will be used as the project root.[<a href="https://tutorial.djangogirls.org/en/django_start_project/index.html">2</a>] Note that the root folder can take any name, and thus be rename to just about anything desired, without any detriment to the operation of the project.[<a href="https://docs.djangoproject.com/en/1.11/intro/tutorial01/">1</a>]</p>
+
+<h2 id="references">REFERENCES</h2>
+
+<ol>
+  <li><em>Writing your first Django app, part 1</em> (no date) Available at: https://docs.djangoproject.com/en/1.11/intro/tutorial01/ (Accessed: 14 April 2017).</li>
+  <li><em>Your first Django Project!</em> (no date) Available at: https://tutorial.djangogirls.org/en/django_start_project/index.html (Accessed: 14 April 2017).</li>
+  <li>‘Pip (package manager)’ (2017) <em>Wikipedia.</em> Available at: https://en.wikipedia.org/wiki/Pip_(package_manager) (Accessed: 14 April 2017).</li>
+  <li><em>How to install Django</em> (no date) Available at: https://docs.djangoproject.com/en/1.11/topics/install/ (Accessed: 14 April 2017).</li>
+  <li><em>PostgreSQL: Linux downloads (Ubuntu)</em> (no date) Available at: https://www.postgresql.org/download/linux/ubuntu/ (Accessed: 14 April 2017).</li>
+  <li><em>PostgreSQL: Documentation: 9.6: Creating a Database</em> (no date) Available at: https://www.postgresql.org/docs/9.6/static/tutorial-createdb.html (Accessed: 14 April 2017).</li>
+</ol>
+
+
+  </div>
+
+  
+    <h3>Categories</h3>
+    
+    <div class="categories">
+      
+        
+        
+        The Wayside
+      
+        
+          |
+        
+        
+        Final Year Project
+      
+        
+          |
+        
+        
+        ShelfLife
+      
+  </div>
+  
+
+  
+</article>
+
+      </section>
+    </div>
+
+    
+  </body>
+</html>

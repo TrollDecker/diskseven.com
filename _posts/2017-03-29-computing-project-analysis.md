@@ -3,6 +3,7 @@ layout: post
 title: "Computing Project: Analysis"
 author: Jo Jerrica Decker
 categories:
+  - The Wayside
   - Final Year Project
   - ShelfLife
 ---
